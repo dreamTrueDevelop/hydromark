@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      username: hydromark
+      password: hydromark_admin
+      database: Hydromark
+      port: 27017
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: ${secrets.OAUTH_CLIENTID}
+            clientSecret: ${secrets.OAUTH_CLIENTSECRET}
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
