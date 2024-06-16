@@ -1,18 +1,18 @@
 spring:
   data:
     mongodb:
-      username: {secrets.USERNAME_DB}
-      password: {secrets.PWD_DB}
-      database: {secrets.DB}
-      port: {secrets.DB_PORT}
+      username: hydromark
+      password: hydromark_admin
+      database: Hydromark
+      port: 27017
 
   security:
     oauth2:
       client:
         registration:
           google:
-            clientId: {secrets.OAUTH_CLIENTID}
-            clientSecret: {secrets.OAUTH_CLIENTSECRET}
+            clientId: ${secrets.OAUTH_CLIENTID}
+            clientSecret: ${secrets.OAUTH_CLIENTSECRET}
   servlet:
     multipart:
       max-file-size: 10MB
