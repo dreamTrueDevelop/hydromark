@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      username: {secrets.USERNAME_DB}
+      password: {secrets.PWD_DB}
+      database: {secrets.DB}
+      port: {secrets.DB_PORT}
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: {secrets.OAUTH_CLIENTID}
+            clientSecret: {secrets.OAUTH_CLIENTSECRET}
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
